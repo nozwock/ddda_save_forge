@@ -10,5 +10,15 @@ fn main() {
         .unwrap();
 
     fs::write("DDDA.sav.xml", &unpacked_save).unwrap();
-    fs::write("DDDA.sav", DDDASave::repack(&unpacked_save).unwrap()).unwrap();
+
+    eprintln!("Press enter to continue...");
+    let mut buf = String::new();
+    std::io::stdin().read_line(&mut buf).unwrap();
+
+    eprintln!("Writing save file");
+    fs::write(
+        "DDDA.sav",
+        DDDASave::repack(&fs::read("DDDA.sav.xml").unwrap()).unwrap(),
+    )
+    .unwrap();
 }

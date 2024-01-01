@@ -18,7 +18,7 @@ pub struct DDDASave {
 /// References:
 /// - https://www.fluffyquack.com/tools/source/DDsavetool.rar
 #[derive(Debug, Clone, PartialEq, Eq, PackedSize, EncodeLE, DecodeLE, EncodeBE, DecodeBE)]
-pub struct DDDASaveHeader {
+struct DDDASaveHeader {
     version: u32, // 0x15 for DDDA on console/PC, and 0x5 for the original DD on console
     uncompressed_size: u32,
     compressed_size: u32,
