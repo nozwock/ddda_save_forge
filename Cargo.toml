@@ -14,5 +14,7 @@ opt-level = "s"
 lto = "thin"
 
 [workspace.dependencies]
+ddda_save = { path = "crates/ddda_save" }
+
 anyhow = "1.0"
 serde = { version = "1.0", features = ["derive"] }

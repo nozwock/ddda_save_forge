@@ -59,6 +59,9 @@ dependencies = [
 [[package]]
 name = "ddda_save_forge"
 version = "0.1.0"
+dependencies = [
+ "ddda_save",
+]
 
 [[package]]
 name = "endian_codec"
